@@ -17,3 +17,14 @@ def print_board(board):
         print('%d|%s|' % (row_num, '|'.join(row)))
         row_num += 1
 
+
+def set_user_ships():
+    pass
+
+
+def create_computer_ships():
+    pass
+
+
+def count_sunken_ships():
+    pass
