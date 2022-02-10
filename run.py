@@ -18,8 +18,39 @@ def print_board(board):
         row_num += 1
 
 
-def set_user_ships():
-    pass
+def get_user_input():
+    """
+    Functions to get user input for setting and guessing locations.
+    """
+    while True:
+        try:
+            row = input('Enter a number between 1 - 8: ')
+            if row in '12345678'
+            row = int(row)
+            break
+        except ValueError:
+            print("That's not a valid number, please try again")
+
+    while True:
+        try:
+            column = input('Enter a number between 1 - 8: ')
+            if column in '12345678'
+            column = int(row)
+            break
+        except ValueError:
+            print("That's not a valid number, please try again")
+    return row, column
+
+
+
+
+#def set_user_ships(board):
+    #user_row = input('enter a number between 1 - 8: ')
+    #user_collumn = input('enter a number between 1 - 8: ')
+    #while board[user_row][user_collumn] == '@':
+        #user_row = input('enter a number between 1 - 8: ')
+        #user_collumn = input('enter a number between 1 - 8: ')
+    #board[user_row][user_collumn] = '@'
 
 
 def create_computer_ships():
@@ -28,3 +59,4 @@ def create_computer_ships():
 
 def count_sunken_ships():
     pass
+
