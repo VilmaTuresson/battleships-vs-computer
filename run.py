@@ -66,5 +66,13 @@ def create_computer_ships(board):
 
 
 def count_sunken_ships():
-    pass
+    """
+    Function to increment the sunken_ships variable when computer or user hits a ship.
+    """
+    sunken_ships = 0
+    for row in board:
+        for collumn in row:
+            if sunken_ships == '*':
+                sunken_ships += 1
+        return sunken_ships
 
