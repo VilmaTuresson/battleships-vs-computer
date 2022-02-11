@@ -25,8 +25,8 @@ def get_user_input():
     while True:
         try:
             row = input('Enter a number between 1 - 8: ')
-            if row in '12345678'
-            row = int(row)
+            if row in '12345678':
+                row = int(row)
             break
         except ValueError:
             print("That's not a valid number, please try again")
@@ -34,24 +34,22 @@ def get_user_input():
     while True:
         try:
             column = input('Enter a number between 1 - 8: ')
-            if column in '12345678'
-            column = int(row)
+            if column in '12345678':
+                column = int(row)
             break
         except ValueError:
             print("That's not a valid number, please try again")
     return row, column
 
 
-
-
-#def set_user_ships(board):
-    #user_row = input('enter a number between 1 - 8: ')
-    #user_collumn = input('enter a number between 1 - 8: ')
-    #while board[user_row][user_collumn] == '@':
-        #user_row = input('enter a number between 1 - 8: ')
-        #user_collumn = input('enter a number between 1 - 8: ')
-    #board[user_row][user_collumn] = '@'
-
+def set_user_ships(board):
+    for ship in range(4):
+        print('Enter coordinates to set out your battleships!')
+        user_row, user_column = get_user_input()
+        while board[user_row][user_column] == '@':
+            print('You have already placed a ship on these coorinates')
+            user_row, user_column = get_user_input()
+        board[user_row][user_column] = '@'
 
 def create_computer_ships():
     pass
