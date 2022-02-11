@@ -80,6 +80,17 @@ def count_sunken_ships():
 create_computer_ships(computer_board)
 set_user_ships(player_board)
 
-#while True:
-    #print_board(player_guess_board)
-    #row, column
+while True:
+    print_board(player_guess_board)
+    row, column = get_user_input()
+    if player_guess_board[row][column] == '*':
+        print('You have already guessed that coordinate!')
+    elif player_guess_board[row][column] == '-':
+        print('You have already guessed that coordinate!')
+    elif computer_board[row][column] == '@':
+        print('You sunk a ship!')
+        player_guess_board[row][column] = '*'
+        break
+    else:
+        print('You missed!')
+        player_guess_board[row][column] = '-'
