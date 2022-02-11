@@ -43,6 +43,9 @@ def get_user_input():
 
 
 def set_user_ships(board):
+    """
+    Function calling the get_user_input function to place out user ships.
+    """
     for ship in range(4):
         print('Enter coordinates to set out your battleships!')
         user_row, user_column = get_user_input()
@@ -50,11 +53,12 @@ def set_user_ships(board):
             print('You have already placed a ship on these coorinates')
             user_row, user_column = get_user_input()
         board[user_row][user_column] = '@'
-        
+
 
 def create_computer_ships(board):
     """
-    Function to get two random intergers to place out a ship and trying again if there is a ship places there already.
+    Function to get two random intergers to place out a ship and
+    trying again if there is a ship places there already.
     """
     for ship in range(4):
         computer_row = randint(0, 7)
@@ -63,12 +67,12 @@ def create_computer_ships(board):
             computer_row = randint(0, 7)
             computer_column = randint(0, 7)
         board[computer_row][computer_column] = '@'
-    
 
 
-def count_sunken_ships():
+def count_sunken_ships(board):
     """
-    Function to increment the sunken_ships variable when computer or user hits a ship.
+    Function to increment the sunken_ships variable when
+    computer or user hits a ship.
     """
     sunken_ships = 0
     for row in board:
