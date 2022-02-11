@@ -50,6 +50,7 @@ def set_user_ships(board):
             print('You have already placed a ship on these coorinates')
             user_row, user_column = get_user_input()
         board[user_row][user_column] = '@'
+        
 
 def create_computer_ships(board):
     """
@@ -94,3 +95,17 @@ while True:
     else:
         print('You missed!')
         player_guess_board[row][column] = '-'
+        break
+
+while True:
+    row, column = randint(0, 7), randint(0, 7)
+    if computer_guess_board[row][column] == '*':
+        row, column = randint(0, 7), randint(0, 7)
+    elif player_board[row][column] == '-':
+        row, column = randint(0, 7), randint(0, 7)
+    elif player_board[row][column] == '@':
+        player_board[row][column] = '*'
+        break
+    else:
+        player_board[row][column] = '-'
+        break
