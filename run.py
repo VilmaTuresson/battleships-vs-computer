@@ -71,7 +71,7 @@ def count_sunken_ships():
     """
     sunken_ships = 0
     for row in board:
-        for collumn in row:
+        for column in row:
             if sunken_ships == '*':
                 sunken_ships += 1
         return sunken_ships
@@ -79,3 +79,7 @@ def count_sunken_ships():
 
 create_computer_ships(computer_board)
 set_user_ships(player_board)
+
+#while True:
+    #print_board(player_guess_board)
+    #row, column
