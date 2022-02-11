@@ -101,6 +101,9 @@ while True:
             print('You missed!')
             player_guess_board[row][column] = '-'
             break
+    if count_sunken_ships(player_guess_board) == 4:
+        print('You sank all your oppnents ships!')
+        break
 
     while True:
         row, column = randint(0, 7), randint(0, 7)
@@ -114,3 +117,6 @@ while True:
         else:
             player_board[row][column] = '-'
             break
+    if count_sunken_ships(computer_guess_board) == 4:
+        print('Sorry, you lost!')
+        break
