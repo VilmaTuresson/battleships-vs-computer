@@ -27,7 +27,7 @@ def get_user_input():
             row = input('Enter a number between 1 - 8: ')
             if row in '12345678':
                 row = int(row) - 1
-            break
+                break
         except ValueError:
             print("That's not a valid number, please try again")
 
@@ -36,7 +36,7 @@ def get_user_input():
             column = input('Enter a number between 1 - 8: ')
             if column in '12345678':
                 column = int(column) - 1
-            break
+                break
         except ValueError:
             print("That's not a valid number, please try again")
     return row, column
