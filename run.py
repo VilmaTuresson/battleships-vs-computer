@@ -56,11 +56,11 @@ def create_computer_ships(board):
     Function to get two random intergers to place out a ship and trying again if there is a ship places there already.
     """
     for ship in range(4):
-        computer_row = randint(0, 8)
-        computer_column = randint(0, 8)
+        computer_row = randint(0, 7)
+        computer_column = randint(0, 7)
         while board[computer_row][computer_column] == '@':
-            computer_row = randint(0, 8)
-            computer_column = randint(0, 8)
+            computer_row = randint(0, 7)
+            computer_column = randint(0, 7)
         board[computer_row][computer_column] = '@'
     
 
@@ -76,3 +76,6 @@ def count_sunken_ships():
                 sunken_ships += 1
         return sunken_ships
 
+
+create_computer_ships(computer_board)
+set_user_ships(player_board)
