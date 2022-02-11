@@ -51,8 +51,18 @@ def set_user_ships(board):
             user_row, user_column = get_user_input()
         board[user_row][user_column] = '@'
 
-def create_computer_ships():
-    pass
+def create_computer_ships(board):
+    """
+    Function to get two random intergers to place out a ship and trying again if there is a ship places there already.
+    """
+    for ship in range(4):
+        computer_row = randint(0, 8)
+        computer_column = randint(0, 8)
+        while board[computer_row][computer_column] == '@':
+            computer_row = randint(0, 8)
+            computer_column = randint(0, 8)
+        board[computer_row][computer_column] = '@'
+    
 
 
 def count_sunken_ships():
