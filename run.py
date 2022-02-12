@@ -114,7 +114,7 @@ while True:
         elif PLAYER_BOARD[row][column] == '@':
             COMPUTER_GUESS_BOARD[row][column] = '*'
             print('Your opponent sank one of you ships!')
-            #print_board(COMPUTER_GUESS_BOARD)
+            print_board(COMPUTER_GUESS_BOARD)
             break
         else:
             COMPUTER_GUESS_BOARD[row][column] = '-'
