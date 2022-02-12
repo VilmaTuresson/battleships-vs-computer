@@ -9,7 +9,7 @@ COMPUTER_GUESS_BOARD = [[' '] * 8 for i in range(8)]
 
 def print_board(board):
     """
-    Function to loop out a grid
+    Function to loop out a grid.
     """
     print('  1 2 3 4 5 6 7 8')
     row_num = 1
@@ -113,6 +113,8 @@ while True:
             row, column = randint(0, 7), randint(0, 7)
         elif PLAYER_BOARD[row][column] == '@':
             PLAYER_BOARD[row][column] = '*'
+            print('Your opponent sank one of you ships!')
+            #print_board(COMPUTER_GUESS_BOARD)
             break
         else:
             PLAYER_BOARD[row][column] = '-'
