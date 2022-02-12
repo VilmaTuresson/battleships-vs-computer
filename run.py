@@ -24,7 +24,7 @@ def get_user_input():
     """
     while True:
         try:
-            row = input('Enter a number between 1 - 8: ')
+            row = input('Select a row between 1 - 8: \n')
             if row in '12345678':
                 row = int(row) - 1
                 break
@@ -33,7 +33,7 @@ def get_user_input():
 
     while True:
         try:
-            column = input('Enter a number between 1 - 8: ')
+            column = input('Select a column between 1 - 8: \n')
             if column in '12345678':
                 column = int(column) - 1
                 break
@@ -46,8 +46,8 @@ def set_user_ships(board):
     """
     Function calling the get_user_input function to place out user ships.
     """
+    print('Enter coordinates to set out 4 battleships!')
     for ship in range(4):
-        print('Enter coordinates to set out your battleships!')
         user_row, user_column = get_user_input()
         while board[user_row][user_column] == '@':
             print('You have already placed a ship on these coorinates')
