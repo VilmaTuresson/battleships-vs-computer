@@ -1,10 +1,10 @@
 from random import randint
 
 
-player_board = [[' '] * 8 for i in range(8)]
-player_guess_board = [[' '] * 8 for i in range(8)]
-computer_board = [[' '] * 8 for i in range(8)]
-computer_guess_board = [[' '] * 8 for i in range(8)]
+PLAYER_BOARD = [[' '] * 8 for i in range(8)]
+PLAYER_GUESS_BOARD = [[' '] * 8 for i in range(8)]
+COMPUTER_BOARD = [[' '] * 8 for i in range(8)]
+COMPUTER_GUESS_BOARD = [[' '] * 8 for i in range(8)]
 
 
 def print_board(board):
@@ -82,41 +82,41 @@ def count_sunken_ships(board):
         return sunken_ships
 
 
-create_computer_ships(computer_board)
-set_user_ships(player_board)
+create_computer_ships(COMPUTER_BOARD)
+set_user_ships(PLAYER_BOARD)
 
 while True:
     while True:
-        print_board(player_guess_board)
+        print_board(PLAYER_GUESS_BOARD)
         row, column = get_user_input()
-        if player_guess_board[row][column] == '*':
+        if PLAYER_GUESS_BOARD[row][column] == '*':
             print('You have already guessed that coordinate!')
-        elif player_guess_board[row][column] == '-':
+        elif PLAYER_GUESS_BOARD[row][column] == '-':
             print('You have already guessed that coordinate!')
-        elif computer_board[row][column] == '@':
+        elif COMPUTER_BOARD[row][column] == '@':
             print('You sunk a ship!')
-            player_guess_board[row][column] = '*'
+            PLAYER_GUESS_BOARD[row][column] = '*'
             break
         else:
             print('You missed!')
-            player_guess_board[row][column] = '-'
+            PLAYER_GUESS_BOARD[row][column] = '-'
             break
-    if count_sunken_ships(player_guess_board) == 4:
+    if count_sunken_ships(PLAYER_GUESS_BOARD) == 4:
         print('You sank all your oppnents ships!')
         break
 
     while True:
         row, column = randint(0, 7), randint(0, 7)
-        if computer_guess_board[row][column] == '*':
+        if COMPUTER_GUESS_BOARD[row][column] == '*':
             row, column = randint(0, 7), randint(0, 7)
-        elif player_board[row][column] == '-':
+        elif PLAYER_BOARD[row][column] == '-':
             row, column = randint(0, 7), randint(0, 7)
-        elif player_board[row][column] == '@':
-            player_board[row][column] = '*'
+        elif PLAYER_BOARD[row][column] == '@':
+            PLAYER_BOARD[row][column] = '*'
             break
         else:
-            player_board[row][column] = '-'
+            PLAYER_BOARD[row][column] = '-'
             break
-    if count_sunken_ships(computer_guess_board) == 4:
+    if count_sunken_ships(COMPUTER_GUESS_BOARD) == 4:
         print('Sorry, you lost!')
         break
