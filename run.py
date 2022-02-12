@@ -77,9 +77,9 @@ def count_sunken_ships(board):
     sunken_ships = 0
     for row in board:
         for column in row:
-            if sunken_ships == '*':
+            if column == '*':
                 sunken_ships += 1
-        return sunken_ships
+    return sunken_ships
 
 
 create_computer_ships(COMPUTER_BOARD)
@@ -109,15 +109,15 @@ while True:
         row, column = randint(0, 7), randint(0, 7)
         if COMPUTER_GUESS_BOARD[row][column] == '*':
             row, column = randint(0, 7), randint(0, 7)
-        elif PLAYER_BOARD[row][column] == '-':
+        elif COMPUTER_GUESS_BOARD[row][column] == '-':
             row, column = randint(0, 7), randint(0, 7)
         elif PLAYER_BOARD[row][column] == '@':
-            PLAYER_BOARD[row][column] = '*'
+            COMPUTER_GUESS_BOARD[row][column] = '*'
             print('Your opponent sank one of you ships!')
             #print_board(COMPUTER_GUESS_BOARD)
             break
         else:
-            PLAYER_BOARD[row][column] = '-'
+            COMPUTER_GUESS_BOARD[row][column] = '-'
             break
     if count_sunken_ships(COMPUTER_GUESS_BOARD) == 4:
         print('Sorry, you lost!')
