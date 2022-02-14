@@ -100,7 +100,7 @@ while True:
             PLAYER_GUESS_BOARD[row][column] = '-'
             break
     if count_sunken_ships(PLAYER_GUESS_BOARD) == 4:
-        print('You sank all your opponents ships!')
+        print('VICTORY! The opponents ships are sunk')
         break
 
     while True:
@@ -118,5 +118,5 @@ while True:
             COMPUTER_GUESS_BOARD[row][column] = '-'
             break
     if count_sunken_ships(COMPUTER_GUESS_BOARD) == 4:
-        print('Sorry, you lost!')
+        print('DEFEAT! The opponent sank all your ships')
         break
