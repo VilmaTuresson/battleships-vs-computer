@@ -6,6 +6,19 @@ PLAYER_GUESS_BOARD = [[' '] * 8 for i in range(8)]
 COMPUTER_BOARD = [[' '] * 8 for i in range(8)]
 COMPUTER_GUESS_BOARD = [[' '] * 8 for i in range(8)]
 
+INTRO_STR = """
+-------------------------------------------------------------
+Welcome to a game of battleships!
+-------------------------------------------------------------
+This game is played against a computer, taking turns to guess
+ship coordinates on a board that's eight spaces wide and long.
+All ships resembles one character or space on the board.
+You will place out four ships and then start guessing!
+The first one to sink all four of the opponents ships win!
+-------------------------------------------------------------
+"""
+
+print(INTRO_STR)
 
 def print_board(board):
     """
