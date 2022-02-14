@@ -26,15 +26,15 @@ def get_user_input(input_type):
     user_input = ''
     while input_invalid:
         try:
-            user_input = int(input(f'Select a {input_type} between 1 -8: \n'))
-            if user_input in ['1, 2, 3, 4, 5, 6, 7, 8']:
+            user_input = int(input(f'Select a {input_type} between 1 - 8: \n'))
+            if user_input in [1, 2, 3, 4, 5, 6, 7, 8]:
                 user_input = user_input - 1
                 input_invalid = False
                 return user_input
             else:
-                print(f"'{user_input}' is not a valid number, please try again")
+                print(f"'{user_input}' is not a valid number, try again!")
         except ValueError:
-            print(f"'{user_input}' is not a valid number, please try again")
+            print(f"'{user_input}' is not a valid number, try again!")
 
 
 def set_user_ships(board):
@@ -43,10 +43,12 @@ def set_user_ships(board):
     """
     print('Enter coordinates to set out 4 battleships!')
     for ship in range(4):
-        user_row, user_column = get_user_input()
+        user_row = get_user_input('row')
+        user_column = get_user_input('column')
         while board[user_row][user_column] == '@':
             print('You have already placed a ship on these coordinates')
-            user_row, user_column = get_user_input()
+            user_row = get_user_input('row')
+            user_column = get_user_input('column')
         board[user_row][user_column] = '@'
 
 
@@ -83,7 +85,8 @@ set_user_ships(PLAYER_BOARD)
 while True:
     while True:
         print_board(PLAYER_GUESS_BOARD)
-        row, column = get_user_input()
+        row = get_user_input('row')
+        column = get_user_input('column')
         if PLAYER_GUESS_BOARD[row][column] == '*':
             print('You have already guessed that coordinate!')
         elif PLAYER_GUESS_BOARD[row][column] == '-':
