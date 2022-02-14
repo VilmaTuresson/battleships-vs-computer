@@ -18,28 +18,23 @@ def print_board(board):
         row_num += 1
 
 
-def get_user_input():
+def get_user_input(input_type):
     """
     Functions to get user input for setting and guessing locations.
     """
-    while True:
+    input_invalid = True
+    user_input = ''
+    while input_invalid:
         try:
-            row = input('Select a row between 1 - 8: \n')
-            if row in '12345678':
-                row = int(row) - 1
-                break
+            user_input = int(input(f'Select a {input_type} between 1 -8: \n'))
+            if user_input in ['1, 2, 3, 4, 5, 6, 7, 8']:
+                user_input = user_input - 1
+                input_invalid = False
+                return user_input
+            else:
+                print(f"'{user_input}' is not a valid number, please try again")
         except ValueError:
-            print("That's not a valid number, please try again")
-
-    while True:
-        try:
-            column = input('Select a column between 1 - 8: \n')
-            if column in '12345678':
-                column = int(column) - 1
-                break
-        except ValueError:
-            print("That's not a valid number, please try again")
-    return row, column
+            print(f"'{user_input}' is not a valid number, please try again")
 
 
 def set_user_ships(board):
@@ -50,7 +45,7 @@ def set_user_ships(board):
     for ship in range(4):
         user_row, user_column = get_user_input()
         while board[user_row][user_column] == '@':
-            print('You have already placed a ship on these coorinates')
+            print('You have already placed a ship on these coordinates')
             user_row, user_column = get_user_input()
         board[user_row][user_column] = '@'
 
@@ -102,7 +97,7 @@ while True:
             PLAYER_GUESS_BOARD[row][column] = '-'
             break
     if count_sunken_ships(PLAYER_GUESS_BOARD) == 4:
-        print('You sank all your oppnents ships!')
+        print('You sank all your opponents ships!')
         break
 
     while True:
