@@ -8,13 +8,21 @@ This is a battleships game played in a mock terminal created by code institute.
 
 This game is played against a computer, taking turns to guess ship coordinates on a gameboard that’s eight spaces wide and long. All ships resemble one character or space on the board. The player will get to place out four ships and then start guessing the location of the computer's ships. If the computer manages to sink a ship, the computer's guessing board will display, showing what ship it sunk and send a message telling the user it sank one of their ships. The first one to sink all four of the opponent's ships wins!
 
+Hits on the board displays as '*' and misses as '-'.
+
 ## Features
 
 ### Existing features
 
 - User input for getting two numbers that will be translated to coordinates where the users ships will be placed on the board.
-- Validation sending error message for whenever the user enters letters, numbers that are higher or lower than the board size and when no value is given. 
+
+![intro-bild](https://user-images.githubusercontent.com/89077706/154128329-fcd4521e-6498-43a8-bce5-047ce2826d50.png)
+- Validation sending error message for whenever the user enters letters, numbers that are higher or lower than the board size and when no value is given.
+
+![error-msg](https://user-images.githubusercontent.com/89077706/154128335-a1226f13-3699-4c73-b9cb-ec8b9fa2fa30.png)
 - The user will be alerted when the computer sinks one of the user's ships and the computer's guesses and sunken ships will be displayed.
+
+![sunk-ship](https://user-images.githubusercontent.com/89077706/154128338-47658df1-c1fa-4612-b3ad-3ba0cf8bf1b8.png)
 - Every time the user or computer sinks a ship their score will be incremented and the first one to get a score of four, wins.
 - If the user enters a value for a coordinate that they have already guessed then they will be told so and asked to enter a new value.
 
