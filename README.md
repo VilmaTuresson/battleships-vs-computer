@@ -3,13 +3,14 @@
 This is a battleships game, played in a mock terminal created by code institute. The application holds only the terminal where the game runs as the site is loaded.
 
 [This is a live link to the project.](http://battleships-vs-computer.herokuapp.com/)
+
 ![intro](https://user-images.githubusercontent.com/89077706/154116688-ba745c5a-fa7c-47f1-971d-3eceb43972ad.png)
 
 ## How to play
 
 This game is played against a computer, taking turns to guess ship coordinates on a gameboard that’s eight spaces wide and long. All ships resemble one character or space on the board. The player will get to place out four ships and then start guessing the location of the computer's ships. If the computer manages to sink a ship, the computer's guessing board will display, showing what ship it sunk and send a message telling the user it sank one of their ships. The first one to sink all four of the opponent's ships wins!
 
-Hits on the board displays as '*' and misses as '-'.
+Hits on the board display as '*' and misses as '-'.
 
 ## Features
 
