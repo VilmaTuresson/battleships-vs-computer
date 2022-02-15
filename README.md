@@ -43,7 +43,22 @@ When using the randint function I asked the computer to return an integer starti
 ### Unfixed bugs
 - no bugs remaining
 
-### Deployment
+## UX
+
+### User Stories
+
+#### First-time visitor goals
+As a first-time visitor, I want…
+- To easily understand how the game works and how I should start it.
+- To get clear and consistent feedback while playing.
+- To easily understand when the computer sinks one of my ships.
+
+#### Returning visitor goals
+As a returning visitor, I want…
+- To be familiar with the layout.
+- To the game to be as challenging as the first time played.
+
+## Deployment
 
 This project was deployed using Code Institute’s mock terminal for Heroku.
 
@@ -54,7 +69,7 @@ This project was deployed using Code Institute’s mock terminal for Heroku.
 - Link the Heroku app to the repository
 - Click on Deploy
 
-### Credits
+## Credits
 
 Code Institute 
 - Template for the deployment terminal.
