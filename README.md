@@ -1,31 +1,58 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BATTLESHIPS
 
-Welcome VilmaTuresson,
+This is a battleships game played in a mock terminal created by code institute.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## How to play
 
-## Reminders
+This game is played against a computer, taking turns to guess ship coordinates on a gameboard that’s eight spaces wide and long. All ships resemble one character or space on the board. The player will get to place out four ships and then start guessing the location of the computer's ships. If the computer manages to sink a ship, the computer's guessing board will display, showing what ship it sunk and send a message telling the user it sank one of their ships. The first one to sink all four of the opponent's ships wins!
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Features
 
-## Creating the Heroku app
+### Existing features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- The user inputs two numbers that will be translated to coordinates where their ships will be placed on the board.
+- The randint function is imported to get two random integers from the computer to place out its ships.
+- There is a function to get the coordinate value from the user and validate it so that there is an error message for whenever the user enters numbers that are     higher or lower than the board size, any letter, and when no value is entered. 
+- The user will be alerted when the computer sinks one of the user's ships and the computer's guesses and sunken ships will be displayed.
+- Every time the user or computer sinks a ship their score will be incremented and the first one to get a score of four, wins.
+- If the user enters a value for a coordinate that they have already guessed then they will be told so and asked to enter a new value.
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Future features 
+- The user gets to set the width and length of the board.
+- The user gets to set the length of the ships.
+- The user gets to choose how many ships are to be placed out on the board.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Testing
 
-Connect your GitHub repository and deploy as normal.
+I have manually tested this application by doing the following:
 
-## Constraints
+- The application has been run through the PEP8 linter with no problems returned.
+- I have asked friends to play through the game and they have done so without any issues.
+- I have tested it in my local terminal as well as the deployed version.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Validator testing
 
------
-Happy coding!
+No error or warnings were returned when run through the [PEP8-linter](http://pep8online.com/)
+
+### Fixed bugs
+When using the randint function I asked the computer to return an integer starting at zero and stopping at nine, as you would when setting the range method, which returned an IndexError. I solved this by changing the values to correspond with the indexes on the gameboard. 
+
+### Unfixed bugs
+- no bugs remaining
+
+### Deployment
+
+This project was deployed using Code Institute’s mock terminal for Heroku.
+
+- Steps for deployment are as follows:
+- Fork or clone this repository
+- Create a new Heroku app
+- Set the buildpacks to Python and NodeJs in that order
+- Link the Heroku app to the repository
+- Click on Deploy
+
+### Credits
+
+Code Institute 
+- Template for the deployment terminal.
