@@ -1,6 +1,7 @@
 # BATTLESHIPS
 
 This is a battleships game played in a mock terminal created by code institute.
+![intro](https://user-images.githubusercontent.com/89077706/154116688-ba745c5a-fa7c-47f1-971d-3eceb43972ad.png)
 
 ## How to play
 
