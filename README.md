@@ -12,9 +12,8 @@ This game is played against a computer, taking turns to guess ship coordinates o
 
 ### Existing features
 
-- The user inputs two numbers that will be translated to coordinates where their ships will be placed on the board.
-- The randint function is imported to get two random integers from the computer to place out its ships.
-- There is a function to get the coordinate value from the user and validate it so that there is an error message for whenever the user enters numbers that are     higher or lower than the board size, any letter, and when no value is entered. 
+- User input for getting two numbers that will be translated to coordinates where the users ships will be placed on the board.
+- Validation sending error message for whenever the user enters letters, numbers that are higher or lower than the board size and when no value is given. 
 - The user will be alerted when the computer sinks one of the user's ships and the computer's guesses and sunken ships will be displayed.
 - Every time the user or computer sinks a ship their score will be incremented and the first one to get a score of four, wins.
 - If the user enters a value for a coordinate that they have already guessed then they will be told so and asked to enter a new value.
