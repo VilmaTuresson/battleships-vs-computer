@@ -20,6 +20,7 @@ The first one to sink all four of the opponents ships win!
 
 print(INTRO_STR)
 
+
 def print_board(board):
     """
     Function to loop out a grid.
@@ -39,7 +40,8 @@ def get_user_input(input_type):
     user_input = ''
     while input_invalid:
         try:
-            user_input = int(input(f'Select a {input_type} between 1 - 8: \n'))
+            user_input = input(f'Select a {input_type} between 1 - 8: \n')
+            user_input = int(user_input)
             if user_input in [1, 2, 3, 4, 5, 6, 7, 8]:
                 user_input = user_input - 1
                 input_invalid = False
