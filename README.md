@@ -18,7 +18,7 @@ Hits on the board display as '*' and misses as '-'.
 
 - User input for getting two numbers that will be translated to coordinates where the users ships will be placed on the board.
 
-![intro-bild](https://user-images.githubusercontent.com/89077706/154128329-fcd4521e-6498-43a8-bce5-047ce2826d50.png)
+![intro-img](https://user-images.githubusercontent.com/89077706/154243177-6ad53477-15d9-48d6-b404-a2ed286ca108.png)
 - Validation sending error message for whenever the user enters letters, numbers that are higher or lower than the board size and when no value is given.
 
 ![error-msg](https://user-images.githubusercontent.com/89077706/154128335-a1226f13-3699-4c73-b9cb-ec8b9fa2fa30.png)
